@@ -1,6 +1,7 @@
 [recipe]
 name = "Super Mario 64 (sm64ex)"
 slug = "sm64ex"
+kind = "container"
 description = "Native PC port of Super Mario 64 via sm64ex with analog camera and texture fixes."
 version = "0.1.0"
 upstream = "https://github.com/sm64pc/sm64ex"

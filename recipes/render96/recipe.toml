@@ -1,6 +1,7 @@
 [recipe]
 name = "Super Mario 64 (Render96)"
 slug = "render96"
+kind = "container"
 description = "Super Mario 64 PC port with high-quality 90s-era render models and HD textures via Render96ex."
 version = "0.1.0"
 upstream = "https://github.com/Render96/Render96ex"
