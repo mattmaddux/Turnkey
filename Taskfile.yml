@@ -1,0 +1,25 @@
+version: '3'
+
+vars:
+  BIN_DIR: ./bin
+
+tasks:
+  default:
+    deps: [build]
+
+  build:
+    desc: Build the turnkey binary inside Docker, output to ./bin/turnkey
+    cmds:
+      - mkdir -p {{.BIN_DIR}}
+      - docker build --target export --output type=local,dest={{.BIN_DIR}} .
+
+  run:
+    desc: Build and run turnkey
+    deps: [build]
+    cmds:
+      - "{{.BIN_DIR}}/turnkey"
+
+  clean:
+    desc: Remove build artifacts
+    cmds:
+      - rm -rf {{.BIN_DIR}}
